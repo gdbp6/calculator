@@ -72,6 +72,9 @@ signBtns.forEach((btn) => {
                 num1 = Number(arr[0]);
                 num2 = Number(arr[1]);
                 operate(operator, num1, num2);
+                if (answer != Math.floor(answer)) {
+                    answer = answer.toFixed(2);
+                }
                 display.value = answer;
             }
         }
@@ -86,6 +89,9 @@ equalBtn.addEventListener("click", () => {
         num1 = Number(arr[0]);
         num2 = Number(arr[1]);
         operate(operator, num1, num2);
+        if (answer != Math.floor(answer)) {
+            answer = answer.toFixed(2);
+        }
         display.value = answer;
         operator = '';
     }
