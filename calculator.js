@@ -48,6 +48,7 @@ const numBtns = document.querySelectorAll('.num');
 const signBtns = document.querySelectorAll('.sign');
 const equalBtn = document.querySelector('.equal');
 const clearBtn = document.querySelector('.clear');
+const backBtn = document.querySelector('.back');
 
 numBtns.forEach((btn) => {
     btn.addEventListener("click", () => {
@@ -60,6 +61,10 @@ numBtns.forEach((btn) => {
 
 clearBtn.addEventListener("click", () => {
     display.value = '';
+})
+
+backBtn.addEventListener("click", () => {
+    display.value = display.value.slice(0, -1);
 })
 
 signBtns.forEach((btn) => {
