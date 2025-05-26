@@ -55,7 +55,15 @@ numBtns.forEach((btn) => {
         if (display.value == answer) {
             display.value = '';
         }
-        display.value += btn.innerText;
+        if (btn.innerText == ".") {
+            if (!display.value.includes('.')) {
+                display.value += btn.innerText;
+            } else if (operator != '' && display.value.match(/\./g).length < 2) {
+                display.value += btn.innerText;
+            }
+        } else {
+            display.value += btn.innerText;
+        }
     })
 })
 
